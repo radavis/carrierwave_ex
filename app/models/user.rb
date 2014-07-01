@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   def name
     "#{first_name} #{last_name}"
   end
+
+  def thumbnail
+    photo_url(:thumb).to_s
+  end
 end
