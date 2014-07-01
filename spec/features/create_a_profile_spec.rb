@@ -12,6 +12,6 @@ feature 'create a profile' do
 
     user = User.last
     expect(page).to have_content('richard.davis@launchacademy.com')
-    expect(page).to have_css("img[src='#{user.photo_url}']")
+    expect(page).to have_css("img[src='#{user.thumbnail}']")
   end
 end
