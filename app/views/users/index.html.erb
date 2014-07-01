@@ -1,0 +1,21 @@
+<h1>Users</h1>
+
+<table>
+  <tr>
+    <th>Photo</th>
+    <th>Name</th>
+    <th>email</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= image_tag user.photo_url(:thumb).to_s, size: 64%></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+  </tr>
+<% end %>
+
+</table>
+
+
+<%= link_to "New User", new_user_path %>
